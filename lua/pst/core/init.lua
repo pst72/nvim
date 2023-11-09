@@ -1,7 +1,0 @@
-require 'options'
--- require 'keymaps'
-require 'global'
-require 'lazy'
-require 'mappings'
-require 'settings'
-require 'autocommands'
