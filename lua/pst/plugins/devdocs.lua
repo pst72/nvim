@@ -1,3 +1,10 @@
+vim.keymap.set('n', '<localleader>di', '<cmd>DevdocsInstall<cr>', { desc = 'Install DevDocs ' })
+vim.keymap.set('n', '<localleader>dU', '<cmd>DevdocsUninstall<cr>', { desc = 'UnInstall DevDocggs ' })
+vim.keymap.set({'n', 'v'}, '<localleader>dO', '<cmd>DevdocsOpen<cr>', { desc = 'Open DevDocs ' })
+vim.keymap.set({'n', 'v'}, '<localleader>dF', '<cmd>DevdocsOpenFloat<cr>', { desc = 'Open DevDocs in Float ' })
+vim.keymap.set({'n', 'v'}, '<localleader>do', '<cmd>DevdocsOpenCurrent<cr>', { desc = 'Open Current filetype DevDocs ' })
+vim.keymap.set({'n', 'v'}, '<localleader>df', '<cmd>DevdocsOpenCurrentFloat<cr>', { desc = 'Open Current filetype DevDocs in Float ' })
+vim.keymap.set('n', '<localleader>du', '<cmd>DevdocsUpdate<cr>', { desc = 'Update DevDocs ' })
 return {
   "luckasRanarison/nvim-devdocs",
   dependencies = {
@@ -5,15 +12,15 @@ return {
     "nvim-telescope/telescope.nvim",
     "nvim-treesitter/nvim-treesitter",
   },
-  keys = {
-    { '<localleader>di', '<cmd>DevdocsInstall<cr>', desc = 'Install DevDocs ' },
-    { '<localleader>dU', '<cmd>DevdocsInstall<cr>', desc = 'UnInstall DevDocs ' },
-    { '<localleader>do', '<cmd>DevdocsOpen<cr>', desc = 'Open DevDocs ' },
-    { '<localleader>df', '<cmd>DevdocsOpenFloat<cr>', desc = 'Open DevDocs in Float ' },
-    { '<localleader>dO', '<cmd>DevdocsOpenCurrent<cr>', desc = 'Open Current filetype DevDocs ' },
-    { '<localleader>dF', '<cmd>DevdocsOpenCurrentFloat<cr>', desc = 'Open Current filetype DevDocs in Float ' },
-    { '<localleader>du', '<cmd>DevdocsUpdate<cr>', desc = 'Update DevDocs ' },
-  },
+  -- keys = {
+  --   { '<localleader>di', '<cmd>DevdocsInstall<cr>', desc = 'Install DevDocs ' },
+  --   { '<localleader>dU', '<cmd>DevdocsInstall<cr>', desc = 'UnInstall DevDocs ' },
+  --   { '<localleader>do', '<cmd>DevdocsOpen<cr>', desc = 'Open DevDocs ' },
+  --   { '<localleader>df', '<cmd>DevdocsOpenFloat<cr>', desc = 'Open DevDocs in Float ' },
+  --   { '<localleader>dO', '<cmd>DevdocsOpenCurrent<cr>', desc = 'Open Current filetype DevDocs ' },
+  --   { '<localleader>dF', '<cmd>DevdocsOpenCurrentFloat<cr>', desc = 'Open Current filetype DevDocs in Float ' },
+  --   { '<localleader>du', '<cmd>DevdocsUpdate<cr>', desc = 'Update DevDocs ' },
+  -- },
   opts = {
     dir_path = vim.fn.stdpath("data") .. "/devdocs", -- installation directory
     telescope = {}, -- passed to the telescope picker
