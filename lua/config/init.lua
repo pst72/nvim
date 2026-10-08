@@ -1,0 +1,5 @@
+require("config.autocmds")
+require("config.options")
+require("config.treesitter")
+require("config.pack")
+require("config.keymaps")
